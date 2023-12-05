@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.arrogantprogrammer.proto";
+option java_outer_classname = "gRPCServiceProto";
+
+package grpcserviceproto;
+
+service gRPCService {
+  rpc AllFilms (Empty) returns (AllFilmsProtos){}
+}
+
+message Empty {}
+
+message FilmProto {
+  string title = 1;
+  int32 episode_id = 2;
+  string director = 3;
+  string release_date = 4;
+}
+
+message AllFilmsProtos {
+  repeated FilmProto films = 1;
+}
+
