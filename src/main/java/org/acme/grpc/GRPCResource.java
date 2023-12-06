@@ -3,7 +3,7 @@ package org.acme.grpc;
 import io.arrogantprogrammer.proto.AllFilmsProtos;
 import io.arrogantprogrammer.proto.Empty;
 import io.arrogantprogrammer.proto.FilmProto;
-import io.arrogantprogrammer.proto.gRPCService;
+import io.arrogantprogrammer.proto.GRPCFilmService;
 import io.quarkus.grpc.GrpcService;
 import io.smallrye.mutiny.Uni;
 import jakarta.inject.Inject;
@@ -16,7 +16,7 @@ import java.util.List;
 import static java.util.stream.Collectors.toList;
 
 @GrpcService
-public class GRPCResource implements gRPCService {
+public class GRPCResource implements GRPCFilmService {
 
     static final Logger LOGGER = LoggerFactory.getLogger(GRPCResource.class);
 

@@ -6,7 +6,7 @@ option java_outer_classname = "gRPCServiceProto";
 
 package grpcserviceproto;
 
-service gRPCService {
+service GRPCFilmService {
   rpc AllFilms (Empty) returns (AllFilmsProtos){}
 }
 
