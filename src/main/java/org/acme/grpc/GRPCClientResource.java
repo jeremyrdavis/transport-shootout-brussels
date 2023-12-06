@@ -2,7 +2,6 @@ package org.acme.grpc;
 
 import io.arrogantprogrammer.proto.Empty;
 import io.arrogantprogrammer.proto.GRPCFilmService;
-import io.arrogantprogrammer.proto.GRPCFilmServiceClient;
 import io.quarkus.grpc.GrpcClient;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
