@@ -36,17 +36,22 @@ public class GraphQLClientResource {
     DynamicGraphQLClient dynamicClient;
 
     @GET
+    @Path("/dynamic")
     public List<Film> allFilms() throws ExecutionException, InterruptedException {
 
         //return dynamicClient.allFilms();
         Document query = document(
                 operation(
                         field("allFilms",
-                                field("director")
+                                field("director"),
+                                field("episodeID"),
+                                        field("releaseDate"),
+                                        field("title")
+                                )
                 )
-        ));
+        );
         Response response = dynamicClient.executeSync(query);
         LOGGER.debug("response: {}", response);
-        return new ArrayList<>();
+        return response.getList(Film.class, "allFilms");
     }
 }
