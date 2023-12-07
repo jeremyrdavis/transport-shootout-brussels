@@ -1,4 +1,4 @@
-package org.acme.microprofile.graphql;
+package io.arrogantprogrammer.microprofile.graphql;
 
 import io.smallrye.graphql.client.GraphQLClient;
 import io.smallrye.graphql.client.Response;
@@ -7,7 +7,7 @@ import io.smallrye.graphql.client.dynamic.api.DynamicGraphQLClient;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
-import org.acme.domain.Film;
+import io.arrogantprogrammer.domain.Film;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

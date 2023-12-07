@@ -8,6 +8,7 @@ package grpcserviceproto;
 
 service GRPCFilmService {
   rpc AllFilms (Empty) returns (AllFilmsProtos){}
+  rpc AllHeroes (Empty) returns (AllHeroProtos){}
 }
 
 message Empty {}
@@ -22,4 +23,26 @@ message FilmProto {
 message AllFilmsProtos {
   repeated FilmProto films = 1;
 }
+
+message HeroProto{
+  string name = 1;
+  string surname = 2;
+  int32  height = 3;
+  int32 mass = 4;
+  bool darkSide = 5;
+  LightSaberProto lightSaberProto = 6;
+  repeated int32 episodeIds = 7;
+}
+
+enum LightSaberProto{
+    RED = 0;
+    BLUE = 1;
+    GREEN = 2;
+    PURPLE = 3;
+}
+
+message AllHeroProtos {
+  repeated HeroProto heroes = 1;
+}
+
 

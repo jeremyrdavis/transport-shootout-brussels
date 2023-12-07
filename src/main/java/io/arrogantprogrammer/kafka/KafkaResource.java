@@ -1,7 +1,7 @@
-package org.acme.kafka;
+package io.arrogantprogrammer.kafka;
 
 import jakarta.enterprise.context.ApplicationScoped;
-import org.acme.domain.Hero;
+import io.arrogantprogrammer.domain.Hero;
 import org.eclipse.microprofile.reactive.messaging.Channel;
 import org.eclipse.microprofile.reactive.messaging.Incoming;
 import org.slf4j.Logger;

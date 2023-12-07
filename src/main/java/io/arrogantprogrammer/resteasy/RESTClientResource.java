@@ -1,10 +1,8 @@
-package org.acme.resteasy;
+package io.arrogantprogrammer.resteasy;
 
-import jakarta.inject.Inject;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
-import org.acme.domain.Film;
-import org.acme.domain.GalaxyService;
+import io.arrogantprogrammer.domain.Film;
 import org.eclipse.microprofile.rest.client.inject.RestClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

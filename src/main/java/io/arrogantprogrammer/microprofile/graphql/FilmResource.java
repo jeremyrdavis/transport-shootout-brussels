@@ -1,11 +1,11 @@
-package org.acme.microprofile.graphql;
+package io.arrogantprogrammer.microprofile.graphql;
 
+import io.arrogantprogrammer.domain.Film;
+import io.arrogantprogrammer.domain.Hero;
 import io.smallrye.graphql.api.Subscription;
 import io.smallrye.mutiny.Multi;
 import io.smallrye.mutiny.operators.multi.processors.BroadcastProcessor;
-import org.acme.domain.Film;
-import org.acme.domain.GalaxyService;
-import org.acme.domain.Hero;
+import io.arrogantprogrammer.domain.GalaxyService;
 import org.eclipse.microprofile.graphql.GraphQLApi;
 import org.eclipse.microprofile.graphql.Query;
 import org.eclipse.microprofile.graphql.Mutation;

@@ -1,13 +1,10 @@
-package org.acme.grpc;
+package io.arrogantprogrammer.grpc;
 
-import io.arrogantprogrammer.proto.AllFilmsProtos;
-import io.arrogantprogrammer.proto.Empty;
-import io.arrogantprogrammer.proto.FilmProto;
-import io.arrogantprogrammer.proto.GRPCFilmService;
+import io.arrogantprogrammer.domain.GalaxyService;
+import io.arrogantprogrammer.proto.*;
 import io.quarkus.grpc.GrpcService;
 import io.smallrye.mutiny.Uni;
 import jakarta.inject.Inject;
-import org.acme.domain.GalaxyService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -36,5 +33,21 @@ public class GRPCResource implements GRPCFilmService {
         }).collect(toList());
 
         return Uni.createFrom().item(AllFilmsProtos.newBuilder().addAllFilms(allFilms).build());
+    }
+
+    @Override
+    public Uni<AllHeroProtos> allHeroes(Empty request) {
+        List<HeroProto> allHeroes = galaxyService.getHeroes().stream().map(hero -> {
+            LOGGER.debug("mapping hero {} to HeroProto", hero);
+            return HeroProto.newBuilder()
+                    .setDarkSide(hero.getDarkSide())
+                    .setName(hero.getName())
+                    .setHeight(hero.getHeight().intValue())
+                    .setMass(hero.getMass())
+                    .setSurname(hero.getSurname())
+                    .addAllEpisodeIds(hero.getEpisodeIds()).build();
+
+        }).collect(toList());
+        return Uni.createFrom().item(AllHeroProtos.newBuilder().addAllHeroes(allHeroes).build());
     }
 }

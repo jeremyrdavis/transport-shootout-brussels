@@ -1,11 +1,11 @@
-package org.acme.grpc;
+package io.arrogantprogrammer.grpc;
 
 import io.arrogantprogrammer.proto.Empty;
 import io.arrogantprogrammer.proto.GRPCFilmService;
 import io.quarkus.grpc.GrpcClient;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
-import org.acme.domain.Film;
+import io.arrogantprogrammer.domain.Film;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

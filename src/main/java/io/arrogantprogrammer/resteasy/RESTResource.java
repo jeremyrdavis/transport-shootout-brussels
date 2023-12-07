@@ -1,14 +1,14 @@
-package org.acme.resteasy;
+package io.arrogantprogrammer.resteasy;
 
 import jakarta.inject.Inject;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
-import org.acme.domain.GalaxyService;
-import org.acme.domain.Hero;
+import io.arrogantprogrammer.domain.GalaxyService;
+import io.arrogantprogrammer.domain.Hero;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import org.acme.domain.Film;
+import io.arrogantprogrammer.domain.Film;
 
 import java.util.List;
 

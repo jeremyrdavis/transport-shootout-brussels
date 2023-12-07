@@ -1,4 +1,4 @@
-package org.acme.domain;
+package io.arrogantprogrammer.domain;
 
 import jakarta.enterprise.context.ApplicationScoped;
 import java.time.LocalDate;

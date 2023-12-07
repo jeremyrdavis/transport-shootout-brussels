@@ -1,7 +1,7 @@
-package org.acme.microprofile.graphql;
+package io.arrogantprogrammer.microprofile.graphql;
 
 import io.smallrye.graphql.client.typesafe.api.GraphQLClientApi;
-import org.acme.domain.Film;
+import io.arrogantprogrammer.domain.Film;
 
 import java.util.List;
 

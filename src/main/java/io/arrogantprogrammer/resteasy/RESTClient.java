@@ -1,7 +1,7 @@
-package org.acme.resteasy;
+package io.arrogantprogrammer.resteasy;
 
 import jakarta.ws.rs.GET;
-import org.acme.domain.Film;
+import io.arrogantprogrammer.domain.Film;
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 
 import java.util.List;

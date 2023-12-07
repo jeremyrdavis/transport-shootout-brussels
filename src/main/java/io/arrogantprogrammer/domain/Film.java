@@ -1,4 +1,4 @@
-package org.acme.domain;
+package io.arrogantprogrammer.domain;
 
 import java.time.LocalDate;
 

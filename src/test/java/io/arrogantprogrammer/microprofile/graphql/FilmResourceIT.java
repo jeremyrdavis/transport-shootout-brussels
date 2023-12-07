@@ -1,4 +1,4 @@
-package org.acme.microprofile.graphql;
+package io.arrogantprogrammer.microprofile.graphql;
 
 import io.quarkus.test.junit.QuarkusIntegrationTest;
 
