@@ -34,7 +34,7 @@ public class FilmResource {
     }
 
     @Query
-    @Description("Get a Films from a galaxy far far away")
+    @Description("Get a Film from a galaxy far far away")
     public Film getFilm(@Name("filmId") int id) {
         return service.getFilm(id);
     }
@@ -44,7 +44,7 @@ public class FilmResource {
     }
 
     @Mutation
-    public Hero createHero(Hero hero) {
+    public Hero createHero(@Name("HeroInput") Hero hero) {
         service.addHero(hero);
         processor.onNext(hero);
         return hero;
@@ -58,6 +58,11 @@ public class FilmResource {
     @Query
     public List<Hero> getHeroesWithSurname(@DefaultValue("Skywalker") String surname) {
         return service.getHeroesBySurname(surname);
+    }
+
+    @Query
+    public List<Hero> allHeroes() {
+        return service.getHeroes();
     }
 
 
